@@ -1,28 +1,5 @@
 import pandas as pd
 import re
-from pathlib import Path
-
-HELADERIA_COLORS = {
-    "primary": "#E8A0BF",
-    "secondary": "#BA90C6",
-    "accent": "#C0DBEA",
-    "chocolate": "#8B5E3C",
-    "mint": "#7EC8A6",
-    "strawberry": "#FF8BA7",
-    "vanilla": "#FFF5E1",
-    "dark": "#4A3B42",
-    "bg": "#FFF8F0",
-    "chart_colors": [
-        "#E8A0BF", "#BA90C6", "#C0DBEA", "#8B5E3C", "#7EC8A6",
-        "#FF8BA7", "#F4A261", "#A8DADC", "#E5989B", "#B5838D",
-        "#6D6875", "#FFB4A2", "#9D8189", "#457B9D", "#2A9D8F",
-        "#E76F51", "#F4A261", "#E9C46A", "#264653", "#A8DADC",
-        "#FFB4A2", "#9D8189", "#457B9D", "#2A9D8F", "#E76F51",
-        "#F4A261", "#E9C46A", "#6D6875", "#B5838D", "#E5989B",
-        "#FF8BA7", "#A8DADC", "#8B5E3C", "#BA90C6", "#E8A0BF",
-        "#7EC8A6", "#C0DBEA", "#264653", "#FFB4A2", "#E5989B"
-    ]
-}
 
 
 def load_and_clean(filepath):
@@ -97,12 +74,12 @@ def get_kpi_metrics(df_sales):
 
 
 def get_sales_by_month(df_sales):
-    monthly = df_sales.groupby("MES_NAME").agg(
+    monthly = df_sales.groupby(["MES", "MES_NAME"]).agg(
         revenue=("REVENUE", "sum"),
         sales=("REVENUE", "count"),
         avg_ticket=("REVENUE", "mean")
     ).reset_index()
-    monthly = monthly.sort_values("MES_NAME")
+    monthly = monthly.sort_values("MES")
     monthly["cumulative_revenue"] = monthly["revenue"].cumsum()
     return monthly
 
