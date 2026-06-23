@@ -60,7 +60,8 @@ def load_and_clean(filepath):
         d["FECHA"] = pd.to_datetime(d["FECHA"])
         d["MES"] = d["FECHA"].dt.to_period("M").astype(str)
         d["MES_NAME"] = d["FECHA"].dt.strftime("%b %Y")
-        d["DIA_SEMANA"] = d["FECHA"].dt.day_name().map(_dia_map())
+        _dias = {0: "Lunes", 1: "Martes", 2: "Miercoles", 3: "Jueves", 4: "Viernes", 5: "Sabado", 6: "Domingo"}
+        d["DIA_SEMANA"] = d["FECHA"].dt.dayofweek.map(_dias)
         d["DIA_SEMANA_NUM"] = d["FECHA"].dt.dayofweek
         d["HORA"] = d["HORARIO"].apply(lambda x: x.hour if pd.notna(x) else None)
         d["DIA"] = d["FECHA"].dt.date
@@ -72,18 +73,6 @@ def _clean_price(x):
     if isinstance(x, str):
         return float(re.sub(r"[^\d.]", "", x))
     return float(x)
-
-
-def _dia_map():
-    return {
-        "Monday": "Lunes",
-        "Tuesday": "Martes",
-        "Wednesday": "Miercoles",
-        "Thursday": "Jueves",
-        "Friday": "Viernes",
-        "Saturday": "Sabado",
-        "Sunday": "Domingo"
-    }
 
 
 def get_kpi_metrics(df_sales):
