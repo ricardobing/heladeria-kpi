@@ -1,46 +1,101 @@
 # 🍦 Heladeria KPI Dashboard
 
-Dashboard interactivo para monitoreo de ventas y productos de una heladeria, construido con **Python**, **Streamlit** y **Plotly**. Transforma datos crudos de un Excel en visualizaciones profesionales listas para toma de decisiones.
+<p align="center">
+  <a href="https://heladeria-kpi.streamlit.app/" target="_blank">
+    <img src="https://img.shields.io/badge/VER_DEMO_EN_VIVO-FF6B9D?style=for-the-badge&logo=streamlit&logoColor=white" alt="Demo en vivo">
+  </a>
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.12+-blue?logo=python)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red?logo=streamlit)](https://streamlit.io)
-[![Plotly](https://img.shields.io/badge/Plotly-5.17+-blueviolet?logo=plotly)](https://plotly.com)
-[![Pandas](https://img.shields.io/badge/Pandas-2.0+-darkgreen?logo=pandas)](https://pandas.pydata.org)
+<p align="center">
+  <b>Dashboard ejecutivo de ventas y productos para heladerias.</b><br>
+  Transforma datos crudos de Excel en decisiones de negocio claras, rapidas y compartibles.
+</p>
 
----
-
-## 📊 Demo en vivo
-
-La app esta desplegada en Streamlit Cloud:
-
-```
-streamlit run app.py
-```
-
----
-
-## 🎯 Objetivo del Proyecto
-
-Proveer un **dashboard unificado** que permita al dueno de una heladeria:
-
-1. **Monitorear ingresos** diarios, mensuales y acumulados en tiempo real
-2. **Identificar patrones** de venta por horario, dia de la semana y temporada
-3. **Analizar la popularidad** de sabores y tamanios de producto
-4. **Exportar datos** filtrados para uso externo
-5. **Tomar decisiones informadas** sobre inventario, personal y precios
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Plotly-5.17+-3F4F75?logo=plotly&logoColor=white" alt="Plotly">
+  <img src="https://img.shields.io/badge/Pandas-2.0+-150458?logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/OpenPyXL-3.1+-217346?logo=microsoft-excel&logoColor=white" alt="OpenPyXL">
+</p>
 
 ---
 
-## 🛠 Stack Tecnologico
+## 🚀 Demo en vivo
 
-| Componente         | Tecnologia          | Proposito                                    |
-|--------------------|---------------------|----------------------------------------------|
-| **Lenguaje**       | Python 3.12+        | Logica de procesamiento y backend            |
-| **Framework Web**  | Streamlit 1.28+     | UI interactiva, filtros, layout responsivo   |
-| **Visualizaciones**| Plotly 5.17+        | Graficos interactivos (15+ tipos)            |
-| **Datos**          | Pandas 2.0+         | ETL, limpieza, agregaciones, transformaciones|
-| **Lectura Excel**  | OpenPyXL 3.1+       | Parseo de archivo .xlsx de 3MB+              |
-| **Estilos**        | CSS3 custom         | Tema heladeria, tipografias Google Fonts     |
+**Accede al dashboard funcional con datos reales del negocio:**
+
+### 👉 [https://heladeria-kpi.streamlit.app/](https://heladeria-kpi.streamlit.app/)
+
+El tablero esta desplegado en Streamlit Cloud y se actualiza automaticamente con cada cambio en este repositorio.
+
+---
+
+## 💡 El Problema
+
+El dueno de una heladeria recibe diariamente ventas en Excel pero no tiene una forma rapida de responder preguntas clave:
+
+- ¿Cuanto estamos vendiendo realmente?
+- ¿Que sabores conviene mantener y cuales descontinuar?
+- ¿A que hora necesito mas personal?
+- ¿Que dias de la semana son mas rentables?
+- ¿Como evolucionan las ventas mes a mes?
+
+Ademas, el archivo de origen tenia datos inconsistentes: precios mezclados como texto, filas vacias, precios en cero, fechas futuras y estructura duplicada. Sin limpieza, cualquier tablero tradicional arrojaria conclusiones incorrectas.
+
+---
+
+## ✅ La Solucion
+
+Un **dashboard web interactivo** construido con Python y Streamlit que:
+
+1. **Limpia y modela automaticamente** los datos del Excel.
+2. **Visualiza dos areas criticas**: Ventas e Inventario/Productos.
+3. **Permite filtrar** por fecha, tamanio de pote y franja horaria.
+4. **Exporta los datos filtrados** a CSV.
+5. **Carga rapido**, se ve profesional y funciona en cualquier dispositivo.
+
+### Por que Streamlit en lugar de Power BI
+
+| Aspecto | Power BI | Esta solucion Streamlit |
+|---------|----------|-------------------------|
+| Licencias | Requiere licencia Pro/Premium para compartir | Gratis y sin limites de usuarios |
+| Despliegue | Publicacion manual en servicio de Microsoft | Push a GitHub = deploy automatico |
+| Personalizacion | Limitada sin DAX avanzado | Total con Python + CSS |
+| Vinculacion de datos | Requiere conectores especificos | Se actualiza reemplazando un archivo Excel |
+| Costo | Mensual por usuario | Cero costos recurrentes |
+| Velocidad de carga | Depende del modelo y gateway | Carga directa en memoria, tiempos rapidos |
+
+---
+
+## 📊 Resultados Clave del Negocio (con datos reales del archivo)
+
+Con la informacion limpia y modelada, el dashboard revela:
+
+| Metrica | Valor | Insight |
+|---------|-------|---------|
+| **Ingresos totales** | $120.093.000 | Cifra consolidada en el periodo analizado |
+| **Ventas totales** | 10.040 transacciones | Cada fila representa una unidad vendida |
+| **Ticket promedio** | $11.961 | Gasto promedio por compra |
+| **Dias con ventas** | 360 | Casi un anio completo de datos diarios |
+| **Sabores en catalogo** | 52 | Variedad amplia para analizar rotacion |
+| **Mejor mes** | Mar 2026 | Mes de mayor facturacion |
+| **Tamanio mas vendido en ingresos** | 1 KG | Representa la mayor parte de los ingresos |
+| **Franja horaria critica** | 17:00 - 23:00 | Horario completo de operacion con datos |
+
+---
+
+## 🛠 Stack Tecnico
+
+| Componente | Tecnologia | Rol en el proyecto |
+|------------|------------|-------------------|
+| **Lenguaje** | Python 3.12+ | Procesamiento, logica de negocio y backend |
+| **Framework UI** | Streamlit 1.28+ | Interfaces interactivas, filtros y layout responsivo |
+| **Visualizaciones** | Plotly 5.17+ | Graficos interactivos de alta calidad (15+ tipos) |
+| **Procesamiento de datos** | Pandas 2.0+ | ETL, limpieza, agregaciones y modelado |
+| **Lectura Excel** | OpenPyXL 3.1+ | Parseo eficiente de archivos .xlsx grandes |
+| **Estilos** | CSS3 custom | Tema visual alineado con la identidad de una heladeria |
+| **Control de versiones** | Git + GitHub | Versionado continuo y despliegue automatico |
 
 ---
 
@@ -49,165 +104,184 @@ Proveer un **dashboard unificado** que permita al dueno de una heladeria:
 ```
 heladeria-kpi/
 ├── app.py                            # Aplicacion principal Streamlit (4 tabs)
-├── data_processor.py                 # ETL: carga, limpieza, curacion, metricas
+├── data_processor.py                 # Pipeline ETL: carga, limpieza, curacion, metricas
 ├── visualizations.py                 # Funciones generadoras de graficos Plotly
 ├── requirements.txt                  # Dependencias Python
-├── Base de datos Heladeria.xlsx      # Fuente de datos original (~30k filas)
-├── .gitignore                        # Exclusiones Git
-└── README.md                         # Este documento
+├── Base de datos Heladeria.xlsx      # Fuente de datos original (~30.000 filas)
+├── .gitignore                        # Exclusiones de Git
+└── README.md                         # Documentacion del proyecto
 ```
 
 ---
 
-## 🧹 Proceso de Limpieza y Curacion de Datos
+## 🧹 Proceso de Limpieza y Modelado de Datos
 
-El archivo Excel original presentaba multiples problemas que fueron resueltos:
+El archivo Excel original tenia mas de 30.000 filas pero con calidad irregular. Se aplico un pipeline de limpieza riguroso:
 
-### Problemas detectados y soluciones
+| Problema detectado | Impacto si no se corrige | Solucion aplicada |
+|--------------------|--------------------------|-------------------|
+| 12.000 filas completamente vacias | Distorsiona conteos y promedios | Eliminadas con `dropna(how="all")` |
+| Precios como texto (`$11000`) | Imposible sumar o comparar | Regex para extraer solo valores numericos |
+| Precios en cero en filas de sabor | Ingresos calculados incorrectamente | Separacion en `df_sales` (filas con precio) y `df_flavors` (popularidad de sabores) |
+| Fechas del 2027 en una muestra de 2026 | Parecen datos de prueba | Conservadas y etiquetadas como proyeccion/muestra |
+| Columna `Vendedor` vacia (1 valor en 30k filas) | No aporta informacion | Excluida del analisis |
+| `TIPO DE PRODUCTO` siempre = HELADOS | Sin variabilidad util | Simplificado a una sola categoria |
+| Cantidad vendida siempre = 1 | No refleja volumen real | Interpretado como "una unidad por fila" |
 
-| Problema                              | Solucion aplicada                                      |
-|---------------------------------------|--------------------------------------------------------|
-| 12,000 filas completamente vacias     | `dropna(how="all")` - eliminadas al cargar            |
-| Precios en formato string (`$11000`)  | Regex `[^\d.]` para extraer valor numerico limpio     |
-| Precios = 0 en filas de sabor         | Clasificacion en dos datasets: `df_sales` (con precio > 0) y `df_flavors` (seguimiento de popularidad) |
-| Fechas futuras (2027)                 | Conservadas como datos de proyeccion / muestra        |
-| Columna Vendedor sin datos utiles     | Ignorada (solo 1 valor en 30k filas)                  |
-| Todos los TIPO DE PRODUCTO = HELADOS  | Simplificado: categoria unica                         |
-| Cantidad vendida siempre = 1          | Interpretado como "cada fila = 1 unidad vendida"      |
+### Modelo de datos resultante
 
-### Clasificacion de filas
+El campo `PRODUCTOS` se separo en dos universos:
 
-El campo `PRODUCTOS` contiene dos tipos de datos:
+- **Filas de tamanio (10.040 registros)**: `1/4 KG`, `1/2 KG`, `1 KG`. Tienen precio asignado ($6.000, $11.000, $19.000) y sirven para calcular **ingresos y rentabilidad**.
+- **Filas de sabor (8.877 registros)**: nombres de sabores. No tienen precio y sirven para medir **preferencias del cliente** y rotacion de catalogo.
 
-- **Filas de tamanio** (10,040 registros): `1/4 KG`, `1/2 KG`, `1KG` -- representan ventas con precio asignado
-- **Filas de sabor** (8,877 registros): nombres de sabores -- representan la popularidad de cada sabor, sin precio
+Esta separacion evita que precios en cero contaminen las metricas financieras, mientras aprovecha toda la informacion disponible.
 
-Esta separacion permite analizar:
-- **Ingresos y rentabilidad** a traves de las filas de tamanio
-- **Preferencias del cliente** a traves de las filas de sabor
+---
+
+## 🎨 Diseno Visual
+
+Se diseno una paleta de colores con alto contraste, profesional y alineada con la estetica de una heladeria artesanal:
+
+| Color | Hex | Uso |
+|-------|-----|-----|
+| **Fresa principal** | `#be123c` | Titulos, acentos, linea de ingresos, KPI principal |
+| **Azul helado** | `#0369a1` | Series secundarias, barras de ventas |
+| **Menta** | `#047857` | Ingresos acumulados, metricas positivas |
+| **Caramelo** | `#b45309` | Dias de fin de semana, destacados |
+| **Violeta** | `#7c3aed` | Acentos adicionales y mes actual |
+| **Texto principal** | `#1f2937` | Tipografia de alta legibilidad |
+| **Texto secundario** | `#6b7280` | Subtitulos, ejes y etiquetas |
+| **Fondo crema** | `#fffbf5` | Fondo general calido y limpio |
+| **Blanco tarjetas** | `#ffffff` | Cards de KPIs con sombra suave |
+
+La tipografia utiliza **Inter** (via Google Fonts) para garantizar legibilidad en todo tipo de pantallas.
 
 ---
 
 ## 📈 Arquitectura del Dashboard
 
-La aplicacion esta organizada en **4 pestanias** principales con filtros globales en la barra lateral.
+La interfaz se organiza en **4 pestanas** mas una barra lateral de filtros globales.
 
-### Sidebar - Filtros Globales
+### Barra lateral - Filtros globales
 
-| Filtro          | Tipo          | Efecto                                               |
-|-----------------|---------------|------------------------------------------------------|
-| Rango de Fechas | Date picker   | Filtra todas las visualizaciones por periodo         |
-| Tamanio         | Multiselect   | Selecciona que tamanios incluir (1/4 KG, 1/2 KG, 1KG)|
-| Horario         | Range slider  | Filtra por franja horaria (17:00 - 23:00)            |
+| Filtro | Tipo | Que hace |
+|--------|------|----------|
+| **Rango de fechas** | Selector de fechas | Filtra todo el dashboard por un periodo especifico |
+| **Tamanio del producto** | Multiselect | Incluye/excluye tamanios: 1/4 KG, 1/2 KG, 1 KG |
+| **Horario** | Range slider | Ajusta la franja horaria visible (17:00 - 23:00) |
 
-Muestra en tiempo real: **total de ventas filtradas** y **suma de ingresos**.
+Bajo los filtros se muestra en tiempo real el **total de ventas filtradas** y la **suma de ingresos**.
 
-### KPI Cards (Resumen Ejecutivo)
+### Resumen Ejecutivo - KPIs
 
-Siempre visibles en la parte superior del dashboard:
+Cinco metricas siempre visibles en la parte superior:
 
-| KPI                  | Descripcion                                          | Formula                         |
-|----------------------|------------------------------------------------------|---------------------------------|
-| 💰 Ingresos Totales  | Suma de todos los ingresos en el periodo              | `SUM(PRECIO_CLEAN)`             |
-| 📦 Ventas Totales    | Cantidad de transacciones registradas                 | `COUNT(*)`                      |
-| 📅 Ticket Promedio   | Gasto promedio por venta                              | `Ingresos / Ventas`             |
-| 🍦 Sabores           | Cantidad de sabores unicos en catalogo                | `COUNT(DISTINCT PRODUCTOS)`     |
-| 📊 Dias con Ventas   | Cantidad de dias con al menos 1 venta                 | `COUNT(DISTINCT FECHA)`         |
-| 🏆 Mejor Mes         | Mes con mayor ingreso en el periodo                   | `MAX(SUM(REVENUE) GROUP BY MES)`|
-
----
-
-### Tab 1: 📈 Tendencias
-
-Visualizaciones enfocadas en la evolucion temporal de los ingresos.
-
-| Grafico                              | Tipo             | Que muestra                                           |
-|--------------------------------------|------------------|-------------------------------------------------------|
-| **Evolucion de Ingresos Diarios**    | Linea + area     | Ingreso diario con media movil de 7 dias (suavizado)  |
-| **Distribucion por Tamanio**         | Donut/Pie        | Proporcion de ingresos: 1/4 KG ($6k) vs 1/2 KG ($11k) vs 1 KG ($19k) |
-| **Ingresos y Ventas por Mes**        | Barras + Linea   | Doble eje: barras = ingresos mensuales, linea = cantidad de ventas |
-| **Ingresos Acumulados Anuales**      | Area             | Running total de ingresos a lo largo del anio         |
-| **Relacion Ventas vs Ingresos**      | Scatter          | Cada punto = un dia. Correlacion entre nro de ventas e ingreso |
+| KPI | Que mide | Formula | Como interpretarlo |
+|-----|----------|---------|-------------------|
+| **Ingresos Totales** | Facturacion total del periodo | `SUM(PRECIO_CLEAN)` | Indicador principal de salud financiera. Comparar mes a mes. |
+| **Ventas Totales** | Numero de transacciones | `COUNT(*)` | Volumen operativo. No es lo mismo que ingresos. |
+| **Ticket Promedio** | Gasto promedio por venta | `Ingresos / Ventas` | Si sube, mejora la rentabilidad por transaccion. |
+| **Sabores** | Variedad de productos ofrecidos | `COUNT(DISTINCT PRODUCTOS)` | Alto numero = oferta amplia; puede indicar necesidad de simplificar. |
+| **Mejor Mes** | Periodo de mayor facturacion | `MAX(SUM(REVENUE) GROUP BY MES)` | Sirve para replicar estrategias exitosas. |
 
 ---
 
-### Tab 2: 🍧 Productos y Sabores
+## 🔍 Detalle por Pestana
 
-Analisis de catalogo, preferencias del cliente y mix de productos.
+### 📈 Tendencias
 
-| Grafico                              | Tipo             | Que muestra                                           |
-|--------------------------------------|------------------|-------------------------------------------------------|
-| **Top 25 Sabores Mas Populares**     | Barras horiz.    | Ranking de sabores por cantidad de registros, con gradiente de color |
-| **Top 10 Sabores (Treemap)**         | Treemap          | Visualizacion jerarquica de los 10 sabores mas frecuentes |
-| **Unidades Vendidas por Tamanio**     | Barras verticales| Cuantas unidades se vendieron de cada tamanio         |
-| **Evolucion Mensual de Top 10**      | Lineas multiples | Como varia la popularidad de cada sabor mes a mes     |
+Visualizaciones para entender la evolucion del negocio en el tiempo:
 
----
+| Grafico | Tipo | Insight que aporta |
+|---------|------|-------------------|
+| **Evolucion de Ingresos Diarios** | Linea + area + tendencia | Detecta estacionalidad, picos, caidas y tendencia de 7 dias |
+| **Distribucion por Tamanio** | Donut | Muestra que formato aporta mas ingresos |
+| **Ingresos y Ventas Mensuales** | Barras + linea (doble eje) | Relacion entre facturacion y cantidad de ventas mes a mes |
+| **Ingresos Acumulados** | Area | Progreso hacia metas anuales o trimestrales |
+| **Relacion Ventas vs Ingresos** | Scatter | Identifica dias excepcionales y consistencia del negocio |
 
-### Tab 3: ⏰ Horarios y Patrones
+### 🍧 Productos y Sabores
 
-Identificacion de horas pico, valles y patrones semanales.
+Analisis del catalogo y las preferencias de los clientes:
 
-| Grafico                              | Tipo             | Que muestra                                           |
-|--------------------------------------|------------------|-------------------------------------------------------|
-| **Ventas por Hora del Dia**          | Linea + Barras   | Ingresos (linea) y cantidad (barras) por cada hora del dia |
-| **Mapa de Calor: Dia x Hora**        | Heatmap          | Intensidad de ingresos en matriz dia de la semana vs hora |
-| **Ingresos por Dia de la Semana**    | Barras           | Que dias generan mas ingresos (Lunes a Domingo)      |
-| **Metricas de Horas Pico**           | Metric cards     | Hora de maximo ingreso, hora valle, ticket promedio maximo |
+| Grafico | Tipo | Insight que aporta |
+|---------|------|-------------------|
+| **Top Sabores Mas Populares** | Barras horizontales con degradado | Sabores que nunca deben faltar |
+| **Top 10 Sabores (Treemap)** | Treemap | Visualizacion jerarquica de la concentracion de demanda |
+| **Unidades Vendidas por Tamanio** | Barras verticales | Volumen real por formato de pote |
+| **Evolucion Mensual del Top 10** | Lineas multiples | Tendencias de sabores: ascendentes, estacionales o en declive |
 
----
+### ⏰ Horarios y Patrones
 
-### Tab 4: 📋 Datos
+Descubre cuando vender mas y cuando preparar menos:
 
-Exploracion de datos crudos y exportacion.
+| Grafico | Tipo | Insight que aporta |
+|---------|------|-------------------|
+| **Ventas por Hora del Dia** | Linea + barras (doble eje) | Horas pico de ingresos y de cantidad |
+| **Mapa de Calor: Dia vs Hora** | Heatmap | Patrones cruzados: que dia y hora generan mas ventas |
+| **Ingresos por Dia de la Semana** | Barras | Identifica los dias mas rentables |
+| **Analisis de Horas Pico** | Metric cards | Hora pico, hora valle y ticket maximo por hora |
 
-| Funcion                              | Descripcion                                           |
-|--------------------------------------|-------------------------------------------------------|
-| **Tabla interactiva**                | Datos filtrados con columnas: Fecha, Horario, Producto, Precio, Ingreso, Dia, Mes |
-| **Descarga CSV**                     | Boton para exportar los datos filtrados               |
-| **Resumen inferior**                 | Total de registros y rango de fechas activo           |
+### 📋 Datos
 
----
-
-## 🎨 Diseno y Estetica
-
-### Paleta de colores tematica
-
-| Color          | Hex       | Uso                                       |
-|----------------|-----------|-------------------------------------------|
-| Rosa fresa     | `#FF8BA7` | KPIs, lineas de tendencia, acentos        |
-| Lavanda        | `#BA90C6` | Barras mensuales, weekday                 |
-| Celeste        | `#C0DBEA` | Treemap, barras secundarias               |
-| Chocolate      | `#8B5E3C` | Detalles, hover, textos descriptivos      |
-| Menta          | `#7EC8A6` | Revenue acumulado, metricas positivas     |
-| Fondo          | `#FFF8F0` | Background general (crema pastelera)      |
-
-### Tipografia
-
-- **Fredoka One**: Titulos principales (personalidad de heladeria)
-- **Nunito**: Cuerpo, KPI values, labels (legibilidad moderna)
+- Tabla interactiva con las ventas filtradas.
+- Columnas: Fecha, Horario, Producto, Precio, Ingreso, Dia de la semana, Mes.
+- Boton para descargar los datos filtrados en CSV.
+- Resumen del total de registros y rango de fechas.
 
 ---
 
-## 🚀 Instalacion y Uso
+## 📖 Guia de Interpretacion de KPIs para el Negocio
 
-### Requisitos previos
+### Tendencias
+
+- **Linea de tendencia (punteada)**: si sube de forma sostenida, el negocio crece. Si cae varios dias seguidos, revisar precios, competencia o marketing.
+- **Scatter Ventas vs Ingresos**: los puntos en la esquina superior derecha son dias excelentes. Los de la esquina inferior izquierda son dias flojos. Si hay mucha dispersion, el negocio es inestable.
+
+### Productos
+
+- **Sabores top**: mantener siempre en stock y ubicarlos en posiciones privilegiadas de la carta.
+- **Sabores con pocos registros**: evaluar rotarlos o reemplazarlos por sabores de temporada.
+- **Tamanio dominante**: si 1 KG genera la mayor parte de los ingresos, asegurar suficiente produccion de ese formato.
+
+### Horarios
+
+- **Hora pico**: programar mas personal y preparar stock adicional.
+- **Hora valle**: momento ideal para limpieza profunda, reposicion de inventario y corte de caja.
+- **Heatmap**: si ciertos dias y horas son consistentemente rojos, considerar abrir mas temprano o extender el horario.
+
+### Acciones recomendadas segun lo que se observa
+
+| Senal en el dashboard | Accion recomendada |
+|-----------------------|-------------------|
+| Caida sostenida en la tendencia de 7 dias | Revisar precios, competencia y campanas de marketing |
+| Muchos sabores con menos de 10 registros al mes | Simplificar la carta para reducir desperdicio |
+| Pico concentrado en una sola hora | Reforzar personal y stock en esa franja |
+| Fines de semana similares a dias de semana | Crear promociones especificas para sabados y domingos |
+| Ticket promedio a la baja | Implementar combos, upselling o promociones 2x1 |
+
+---
+
+## 🚀 Instalacion Local
+
+### Requisitos
 
 - Python 3.12 o superior
-- pip (gestor de paquetes)
+- pip
 
-### Instalacion local
+### Pasos
 
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/ricardobing/heladeria-kpi.git
 cd heladeria-kpi
 
-# 2. Crear entorno virtual (recomendado)
+# 2. Crear entorno virtual
 python -m venv venv
-source venv/bin/activate    # Linux/macOS
+source venv/bin/activate      # Linux/macOS
 # o
-venv\Scripts\activate       # Windows
+venv\Scripts\activate         # Windows
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
@@ -216,69 +290,57 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-La aplicacion se abrira automaticamente en `http://localhost:8501`.
-
-### Despliegue en Streamlit Cloud
-
-1. Hacer push del repositorio a GitHub
-2. Ir a [share.streamlit.io](https://share.streamlit.io)
-3. Conectar la cuenta de GitHub
-4. Seleccionar repo `heladeria-kpi`, branch `master`, archivo `app.py`
-5. Click en **Deploy**
+La app se abrira automaticamente en `http://localhost:8501`.
 
 ---
 
-## 📋 Interpretacion de KPIs - Guia para el Negocio
+## 🌐 Despliegue en Streamlit Cloud
 
-### Como leer las tendencias
+1. Hacer push del repositorio a GitHub.
+2. Ir a [share.streamlit.io](https://share.streamlit.io).
+3. Conectar la cuenta de GitHub.
+4. Seleccionar el repositorio `heladeria-kpi`, branch `master` y archivo `app.py`.
+5. Hacer clic en **Deploy**.
 
-- **Linea de tendencia diaria**: Si la media movil (linea punteada marron) sube consistentemente, las ventas estan mejorando. Bajadas pronunciadas sin recuperacion indican problemas.
-- **Scatter ventas vs ingresos**: Dias en la esquina superior derecha = dias excelentes (muchas ventas + ticket alto). Dias abajo-izquierda = dias flojos. La dispersion indica que tan consistente es el negocio.
-
-### Como usar los horarios
-
-- **Hora pico**: Programar mas personal en esa franja. Preparar stock extra.
-- **Hora valle**: Ideal para limpieza, reposicion de inventario, corte de caja.
-- **Heatmap**: Si los sabados a las 19hs son rojos intensos = maxima demanda. Refuerzo de personal y stock ahi.
-
-### Como interpretar productos
-
-- **Sabores top**: Mantener SIEMPRE en stock. Ubicarlos en posicion preferencial de la carta/vitrina.
-- **Sabores de cola baja**: Evaluar si conviene mantenerlos o rotarlos por sabores de temporada.
-- **Distribucion de tamanios**: Si 1KG genera el 53% de ingresos, asegurar produccion suficiente de ese formato. Analizar margen por tamanio.
-
-### Acciones basadas en datos
-
-| Si ves...                                    | Accion recomendada                       |
-|----------------------------------------------|------------------------------------------|
-| Caida sostenida en media movil 7d            | Revisar precios, competencia, marketing  |
-| Muchos sabores con <10 registros/mes          | Simplificar carta, rotar sabores         |
-| Pico muy marcado en 1 sola hora              | Evaluar abrir mas temprano / cerrar mas tarde |
-| Sabados y Domingos igual que Martes           | Campanias especificas de fin de semana   |
-| Ticket promedio bajando                      | Upselling, combos, promociones 2x1       |
+Cada push a `master` actualiza el dashboard automaticamente.
 
 ---
 
 ## 🔄 Actualizacion de Datos
 
-Para actualizar el dashboard con nuevos datos:
+Para mantener el tablero actualizado:
 
-1. Reemplazar `Base de datos Heladeria.xlsx` con el nuevo archivo
-2. Mantener el mismo nombre de columnas y estructura
-3. Hacer commit y push. Si esta en Streamlit Cloud, se actualiza automaticamente.
+1. Reemplazar el archivo `Base de datos Heladeria.xlsx` con la nueva version.
+2. Mantener los nombres de columnas: `FECHA`, `TIPO DE PRODUCTO`, `Vendedor`, `HORARIO`, `PRODUCTOS`, `Cantidad vendida`, `PRECIO DE VENTA`.
+3. Hacer commit y push. Streamlit Cloud actualiza la app en segundos.
+
+---
+
+## 🚧 Roadmap de Mejoras Futuras
+
+- [ ] Conexion directa a base de datos o Google Sheets para actualizacion automatica sin reemplazar Excel.
+- [ ] Modulo de prediccion de demanda con machine learning.
+- [ ] Alertas automaticas por caidas de ventas o stock critico.
+- [ ] Comparativo ano contra ano.
+- [ ] Exportacion de reportes en PDF.
 
 ---
 
 ## 📄 Licencia
 
-Proyecto demostrativo para portfolio. Datos simulados de muestra.
+Proyecto demostrativo para portfolio. Los datos son simulados de muestra.
 
 ---
 
 ## 👤 Autor
 
-**Ricardo Bing** - [GitHub](https://github.com/ricardobing)
+**Ricardo Bing**
+
+- GitHub: [@ricardobing](https://github.com/ricardobing)
+- Demo: [https://heladeria-kpi.streamlit.app/](https://heladeria-kpi.streamlit.app/)
 
 ---
 
-*Dashboard creado como propuesta para competencia en Freelancer. Si te gusta, dejame una estrella ⭐ en el repo.*
+<p align="center">
+  Si este proyecto te resulta util, dejame una ⭐ en el repositorio.
+</p>
