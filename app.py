@@ -1,16 +1,5 @@
 import streamlit as st
-import pandas as pd
 from pathlib import Path
-import locale
-
-# Try to set locale, fallback to default
-try:
-    locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
-except locale.Error:
-    try:
-        locale.setlocale(locale.LC_TIME, "Spanish_Spain.1252")
-    except locale.Error:
-        pass
 
 from data_processor import (
     load_and_clean, get_kpi_metrics, get_sales_by_month,

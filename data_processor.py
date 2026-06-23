@@ -60,7 +60,7 @@ def load_and_clean(filepath):
         d["FECHA"] = pd.to_datetime(d["FECHA"])
         d["MES"] = d["FECHA"].dt.to_period("M").astype(str)
         d["MES_NAME"] = d["FECHA"].dt.strftime("%b %Y")
-        d["DIA_SEMANA"] = d["FECHA"].dt.day_name(locale="es_ES").map(_dia_map())
+        d["DIA_SEMANA"] = d["FECHA"].dt.day_name().map(_dia_map())
         d["DIA_SEMANA_NUM"] = d["FECHA"].dt.dayofweek
         d["HORA"] = d["HORARIO"].apply(lambda x: x.hour if pd.notna(x) else None)
         d["DIA"] = d["FECHA"].dt.date
